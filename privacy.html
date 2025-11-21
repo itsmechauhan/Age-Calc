@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy - AgeCalc</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy - AgeCalc</title>
+  <meta name="description" content="Privacy policy for AgeCalc. We do not store your personal data; calculations run in your browser.">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Paste AdSense global script here if used site-wide -->
 </head>
-
 <body>
-
-<header>
-    <div class="logo">AgeCalc</div>
-    <nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">A<span>ge</span>Calc</div>
+      <nav class="main-nav">
         <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+      </nav>
+    </div>
+  </header>
 
-<div class="page-box">
-<h2>Privacy Policy</h2>
-<p>Your privacy is important to us. This website does not store any personal data. The age you calculate is processed only on your device and not uploaded anywhere.</p>
+  <main class="main">
+    <div class="container page-box">
+      <h2>Privacy Policy</h2>
+      <p>Your privacy is important. AgeCalc does not collect or store personal data. All calculations are performed locally in your browser.</p>
 
-<p>We use Google AdSense, which may use cookies to serve personalized ads. You may opt out of personalized advertising by visiting Google’s Ad Settings.</p>
+      <h3>Ads</h3>
+      <p>We use Google AdSense to serve ads. AdSense may use cookies and identifiers; for details or to opt out of personalized ads, visit Google Ad Settings.</p>
 
-<p>We do not collect:  
-• Names  
-• Birth dates  
-• IP addresses  
-• Location data  
-• Device identifiers  
-</p>
+      <h3>Information we do NOT collect</h3>
+      <ul>
+        <li>Names</li>
+        <li>Birthdates sent to our servers</li>
+        <li>IP addresses</li>
+        <li>Location data</li>
+      </ul>
 
-<p>For any concerns, contact us via the Contact page.</p>
-</div>
+      <p>For questions, contact: support@yourdomain.com</p>
+    </div>
+  </main>
 
-<footer>
-<p>© 2025 AgeCalc</p>
-</footer>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year-privacy"></span> AgeCalc</p>
+    </div>
+  </footer>
 
+<script>
+  document.getElementById('year-privacy').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
