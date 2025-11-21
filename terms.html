@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms & Conditions - AgeCalc</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Terms & Conditions - AgeCalc</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-    <div class="logo">AgeCalc</div>
-    <nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">A<span>ge</span>Calc</div>
+      <nav class="main-nav">
         <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+      </nav>
+    </div>
+  </header>
 
-<div class="page-box">
-<h2>Terms & Conditions</h2>
-<p>This website provides an age calculation tool for general informational purposes only.</p>
+  <main class="main">
+    <div class="container page-box">
+      <h2>Terms & Conditions</h2>
+      <p>Use this tool for informational purposes. Calculations are approximate and not a legal record. By using AgeCalc you accept these terms.</p>
 
-<p>By using this site, you agree that:</p>
+      <ul>
+        <li>We do not guarantee legal accuracy.</li>
+        <li>We may update the service or terms at any time.</li>
+      </ul>
 
-<ul>
-    <li>Age results are approximate and may not be legally accurate.</li>
-    <li>You will not misuse this service.</li>
-    <li>We are not responsible for any decisions based on age results.</li>
-</ul>
+      <p>Contact: support@yourdomain.com</p>
+    </div>
+  </main>
 
-<p>We may update these terms occasionally.</p>
-</div>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year-terms"></span> AgeCalc</p>
+    </div>
+  </footer>
 
-<footer>
-<p>© 2025 AgeCalc</p>
-</footer>
-
+<script>
+  document.getElementById('year-terms').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
