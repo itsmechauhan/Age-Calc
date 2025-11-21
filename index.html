@@ -1,84 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Calculator Online – Calculate Exact Age in Seconds</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Age Calculator Online – Exact Age in Years, Months, Days & Seconds</title>
+  <meta name="description" content="Free online age calculator — calculate your exact age in years, months, days, weeks, hours, minutes and seconds. Fast, private (runs in-browser) and mobile-friendly.">
+  <meta name="keywords" content="age calculator, calculate age, age in seconds, date of birth calculator">
+  <link rel="stylesheet" href="style.css">
 
-    <meta name="description" content="Free online age calculator to calculate your exact age in years, months, days, hours, minutes and seconds. Simple, fast and accurate age calculation tool.">
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Age Calculator",
+    "url": "https://your-vercel-domain.vercel.app",
+    "description": "Calculate exact age in years, months, days, hours, minutes & seconds."
+  }
+  </script>
 
-    <meta name="keywords" content="age calculator, date of birth calculator, calculate age online, exact age calculator, birthday calculator">
-
-    <meta property="og:title" content="Age Calculator Online">
-    <meta property="og:description" content="Accurate age calculator to find your exact age in seconds, minutes, hours, days, months & years. Free and fast.">
-    <meta property="og:type" content="website">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6777715267715288"
+  <!-- ====== PASTE YOUR ADSENSE GLOBAL SCRIPT HERE (replace ca-pub-XXXXXXXXXXXX) ======
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX"
      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+  ===================================================================================== -->
 
-    <!-- JSON-LD SEO Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Age Calculator",
-      "url": "https://your-vercel-domain.vercel.app",
-      "description": "Online Age Calculator to find your exact age in seconds, minutes, days, weeks, months and years.",
-      "applicationCategory": "UtilityApplication"
-    }
-    </script>
-
-    <!-- Google AdSense -->
-    <!-- PASTE YOUR ADSENSE CODE HERE -->
 </head>
-
 <body>
 
-    <!-- Animated Header -->
-    <header class="animated-header">
-        <div class="logo">A<span>ge</span>Calc</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
-    <!-- Cookie Banner -->
-    <div id="cookieBanner" class="cookie-banner">
-        <p>This website uses cookies to improve experience and show relevant ads.</p>
-        <button onclick="acceptCookies()">Accept</button>
+  <!-- Animated Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">A<span>ge</span>Calc</div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="wrapper">
-        <div class="card">
+  <!-- Cookie Banner (will show if not accepted) -->
+  <div id="cookieBanner" class="cookie-banner" aria-live="polite">
+    <div>This website uses cookies to improve experience and show relevant ads. <button onclick="acceptCookies()">Accept</button></div>
+  </div>
 
-            <!-- AdSense Slot 1 (Top) -->
-            <div class="ad-box"><!-- AdSense ad goes here --></div>
-
-            <h1>Free Online Age Calculator</h1>
-            <p class="seo-text">Calculate your exact age in years, months, days, hours, minutes, and seconds using our advanced age calculator tool.</p>
-
-            <label>Select Your Birth Date:</label>
-            <input type="date" id="birthDate">
-
-            <button onclick="calculateAge()">Calculate Age</button>
-
-            <div id="result" class="result-box"></div>
-
-            <!-- AdSense Slot 2 (Bottom) -->
-            <div class="ad-box"><!-- AdSense responsive ad --></div>
+  <main class="main">
+    <section class="hero">
+      <div class="container card">
+        <!-- Top Ad Slot -->
+        <div class="ads-box" aria-hidden="true">
+          <!-- Replace with AdSense unit or keep empty for AutoAds -->
+          <!-- Example manual slot:
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-XXXXXXXXXXXX"
+               data-ad-slot="1234567890"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          -->
+          Top Ad / AdSense Slot
         </div>
-    </div>
 
-    <footer>
-        <p>© 2025 AgeCalc — All Rights Reserved</p>
-        <p><a href="privacy.html">Privacy Policy</a> | 
-           <a href="terms.html">Terms</a> | 
-           <a href="contact.html">Contact</a>
-        </p>
-    </footer>
+        <h1>Free Online Age Calculator</h1>
+        <p class="lead">Calculate exact age in years, months, days, weeks, hours, minutes and seconds — everything runs privately in your browser.</p>
+
+        <label for="birthDate">Select your birth date</label>
+        <input id="birthDate" type="date" aria-label="Birth date">
+
+        <div class="controls">
+          <button id="calcBtn">Calculate Age</button>
+          <button id="toggleLiveBtn" class="outline">Start Live Counter</button>
+        </div>
+
+        <div id="result" class="result-box" aria-live="polite"></div>
+
+        <!-- Bottom Ad Slot -->
+        <div class="ads-box" aria-hidden="true">Bottom Ad / AdSense Slot</div>
+
+        <div class="seo-text">
+          <p>This free age calculator gives precise results and shows age in multiple units. It's private — data stays in your browser only.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> AgeCalc — All rights reserved</p>
+      <p>
+        <a href="privacy.html">Privacy Policy</a>
+        <span class="sep">|</span>
+        <a href="terms.html">Terms</a>
+        <span class="sep">|</span>
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
 
 <script src="script.js"></script>
 <script src="cookie.js"></script>
