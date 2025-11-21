@@ -3,20 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Calculator</title>
+    <title>Age Calculator Online – Calculate Exact Age in Seconds</title>
+
+    <meta name="description" content="Free online age calculator to calculate your exact age in years, months, days, hours, minutes and seconds. Simple, fast and accurate age calculation tool.">
+
+    <meta name="keywords" content="age calculator, date of birth calculator, calculate age online, exact age calculator, birthday calculator">
+
+    <meta property="og:title" content="Age Calculator Online">
+    <meta property="og:description" content="Accurate age calculator to find your exact age in seconds, minutes, hours, days, months & years. Free and fast.">
+    <meta property="og:type" content="website">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6777715267715288"
+     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+
+    <!-- JSON-LD SEO Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Age Calculator",
+      "url": "https://your-vercel-domain.vercel.app",
+      "description": "Online Age Calculator to find your exact age in seconds, minutes, days, weeks, months and years.",
+      "applicationCategory": "UtilityApplication"
+    }
+    </script>
 
     <!-- Google AdSense -->
     <!-- PASTE YOUR ADSENSE CODE HERE -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6777715267715288"
-     crossorigin="anonymous"></script>
 </head>
 
 <body>
 
+    <!-- Animated Header -->
+    <header class="animated-header">
+        <div class="logo">A<span>ge</span>Calc</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <p>This website uses cookies to improve experience and show relevant ads.</p>
+        <button onclick="acceptCookies()">Accept</button>
+    </div>
+
     <div class="wrapper">
         <div class="card">
-            <h1>Age Calculator</h1>
+
+            <!-- AdSense Slot 1 (Top) -->
+            <div class="ad-box"><!-- AdSense ad goes here --></div>
+
+            <h1>Free Online Age Calculator</h1>
+            <p class="seo-text">Calculate your exact age in years, months, days, hours, minutes, and seconds using our advanced age calculator tool.</p>
 
             <label>Select Your Birth Date:</label>
             <input type="date" id="birthDate">
@@ -24,10 +66,21 @@
             <button onclick="calculateAge()">Calculate Age</button>
 
             <div id="result" class="result-box"></div>
+
+            <!-- AdSense Slot 2 (Bottom) -->
+            <div class="ad-box"><!-- AdSense responsive ad --></div>
         </div>
     </div>
 
+    <footer>
+        <p>© 2025 AgeCalc — All Rights Reserved</p>
+        <p><a href="privacy.html">Privacy Policy</a> | 
+           <a href="terms.html">Terms</a> | 
+           <a href="contact.html">Contact</a>
+        </p>
+    </footer>
+
 <script src="script.js"></script>
+<script src="cookie.js"></script>
 </body>
 </html>
-
