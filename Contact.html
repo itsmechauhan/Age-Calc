@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - AgeCalc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">A<span>ge</span>Calc</div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container page-box">
+      <h2>Contact Us</h2>
+      <p>If you have questions or need help, email us at</p>
+      <p><a href="mailto:support@yourdomain.com">support@yourdomain.com</a></p>
+      <p>We typically respond within 48 hours.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year-contact"></span> AgeCalc</p>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('year-contact').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
